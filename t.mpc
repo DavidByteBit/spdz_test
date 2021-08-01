@@ -1,5 +1,9 @@
-file = open("/home/david/Desktop/hello.txt", 'w')
 
-file.write("hello")
 
-file.close()
+a = Array(5, sint)
+
+@for_range(5)
+def _(i):
+    a[i] = sint(i)
+
+write_to_file(a)
