@@ -1,9 +1,13 @@
 
 
-a = Array(5, sint)
+a = Array(5, regint)
 
 @for_range(5)
 def _(i):
-    a[i] = sint(i)
+    a[i] = regint(i)
 
-sint.write_to_file(a)
+print_ln("%s", a)
+
+a.shuffle()
+
+print_ln("%s", a)
