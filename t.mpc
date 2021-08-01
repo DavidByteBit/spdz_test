@@ -1,1 +1,5 @@
-print_ln("Hello There", "/home/david/Desktop.hello.txt")
+file = open("/home/david/Desktop/hello.txt", 'w')
+
+file.write("hello")
+
+file.close()
