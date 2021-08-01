@@ -8,6 +8,8 @@ def _(i):
 
 print_ln("%s", a)
 
-a.shuffle()
+@for_range(1)
+def _(i):
+    a.shuffle()
 
-print_ln("%s", a)
+    print_ln("%s", a)
