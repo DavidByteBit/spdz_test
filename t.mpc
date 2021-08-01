@@ -6,4 +6,4 @@ a = Array(5, sint)
 def _(i):
     a[i] = sint(i)
 
-write_to_file(a)
+sint.write_to_file(a)
