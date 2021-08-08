@@ -12,12 +12,15 @@ n = 8
 
 learning_rate = 0.001
 
-w = sfix.Array(feat)
-w_delta = sfix.Array(feat)
+y = sfix.Array(feat)
+pred = sfix.Array(feat)
+w_delta = sfix.Matrix(1, n)
 
 X = sfix.Matrix(n, feat)
 
 # update weights
 @for_range_opt(n)
 def _(k):
-    w_delta = w_delta + learning_rate * (y - pred) * X[k]
+    w_delta[0] = w_delta + learning_rate * (y - pred) * X[k]
+
+print_ln("%s", w_delta)
