@@ -1,15 +1,23 @@
+# In its current state, this code will not work as it requires other scripts to populate the parties input files.
+# This code simply serves as an example of code in MP-SPDZ. It is unoptimized, and not modular. As such, it should
+# not serve as an example of what 'good' MP-SPDZ code should look like, just what it can look like.
 
+from Compiler import mpc_math
+from Compiler import ml
+# from Compiler.library import public_input()
+import sys
 
-a = Array(5, regint)
+feat = 10
+n = 8
 
-@for_range(5)
-def _(i):
-    a[i] = regint(i)
+learning_rate = 0.001
 
-print_ln("%s", a)
+w = sfix.Array(feat)
+w_delta = sfix.Array(feat)
 
-@for_range(1)
-def _(i):
-    a.shuffle()
+X = Martrix(n, feat)
 
-    print_ln("%s", a)
+# update weights
+@for_range_opt(len(y))
+def _(k):
+    w_delta = w_delta + learning_rate * (y - pred) * X[k]
