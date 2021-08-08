@@ -14,7 +14,7 @@ learning_rate = 0.001
 
 y = sfix.Array(feat)
 pred = sfix.Array(feat)
-w_delta = Matrix(1, n, sfix)
+w_delta = Matrix(1, feat, sfix)
 lr = sfix.Array(feat)
 
 X = Matrix(n, feat, sfix)
