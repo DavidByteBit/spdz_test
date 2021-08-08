@@ -15,7 +15,7 @@ learning_rate = 0.001
 w = sfix.Array(feat)
 w_delta = sfix.Array(feat)
 
-X = Martrix(n, feat)
+X = Matrix(n, feat)
 
 # update weights
 @for_range_opt(len(y))
